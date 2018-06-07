@@ -34,6 +34,7 @@
 		220949EF20C9CFBD005B75F7 /* CentraNo2-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 220949D720C9CFBD005B75F7 /* CentraNo2-Book.ttf */; };
 		220949F020C9CFBD005B75F7 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220949D920C9CFBD005B75F7 /* Localized.swift */; };
 		220949F120C9CFBD005B75F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 220949DA20C9CFBD005B75F7 /* Localizable.strings */; };
+		220949FC20C9D1FF005B75F7 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220949FB20C9D1FF005B75F7 /* PhotosService.swift */; };
 		35BC55CA76A0BD161987B6DA /* Pods_SimpleProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85EF3B8AF7B938D7F46349B /* Pods_SimpleProjectTests.framework */; };
 		52C93BD3FDD0D8975B970509 /* Pods_SimpleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BCF753BEC35080AB73199F /* Pods_SimpleProject.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		220949D720C9CFBD005B75F7 /* CentraNo2-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CentraNo2-Book.ttf"; sourceTree = "<group>"; };
 		220949D920C9CFBD005B75F7 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		220949DA20C9CFBD005B75F7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		220949FB20C9D1FF005B75F7 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		37CF245A29424A4C1EE8E8A5 /* Pods-SimpleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectTests/Pods-SimpleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A85EF3B8AF7B938D7F46349B /* Pods_SimpleProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC134747056CCE34514DD298 /* Pods-SimpleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectTests/Pods-SimpleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		2209499A20C9CCEB005B75F7 /* SimpleProject */ = {
 			isa = PBXGroup;
 			children = (
+				220949F420C9D13F005B75F7 /* App */,
 				220949BB20C9CFBD005B75F7 /* Common */,
 				2209499B20C9CCEB005B75F7 /* AppDelegate.swift */,
 				220949A220C9CCEE005B75F7 /* Assets.xcassets */,
@@ -241,6 +244,62 @@
 				220949DA20C9CFBD005B75F7 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		220949F420C9D13F005B75F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				220949FA20C9D1E7005B75F7 /* Photos */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		220949F520C9D145005B75F7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				220949FB20C9D1FF005B75F7 /* PhotosService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		220949F620C9D14A005B75F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		220949F720C9D155005B75F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		220949F820C9D15C005B75F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		220949F920C9D163005B75F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		220949FA20C9D1E7005B75F7 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				220949F920C9D163005B75F7 /* Model */,
+				220949F820C9D15C005B75F7 /* ViewModel */,
+				220949F720C9D155005B75F7 /* ViewController */,
+				220949F620C9D14A005B75F7 /* View */,
+				220949F520C9D145005B75F7 /* Service */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		9787A25B940B0B2F3D451B94 /* Pods */ = {
@@ -446,6 +505,7 @@
 				220949E920C9CFBD005B75F7 /* UIApplication+Extensions.swift in Sources */,
 				220949E820C9CFBD005B75F7 /* String+Extensions.swift in Sources */,
 				220949E520C9CFBD005B75F7 /* Color.swift in Sources */,
+				220949FC20C9D1FF005B75F7 /* PhotosService.swift in Sources */,
 				220949E020C9CFBD005B75F7 /* UIButtonFactory.swift in Sources */,
 				220949E220C9CFBD005B75F7 /* RefreshTokenProvider.swift in Sources */,
 				220949DE20C9CFBD005B75F7 /* RoundedView.swift in Sources */,
