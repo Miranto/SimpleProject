@@ -36,6 +36,8 @@
 		220949F120C9CFBD005B75F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 220949DA20C9CFBD005B75F7 /* Localizable.strings */; };
 		220949FC20C9D1FF005B75F7 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220949FB20C9D1FF005B75F7 /* PhotosService.swift */; };
 		220949FE20C9D2E9005B75F7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220949FD20C9D2E9005B75F7 /* Photo.swift */; };
+		22094A0020C9D3F3005B75F7 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220949FF20C9D3F3005B75F7 /* PhotosView.swift */; };
+		22094A0220C9D466005B75F7 /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22094A0120C9D466005B75F7 /* BasicView.swift */; };
 		35BC55CA76A0BD161987B6DA /* Pods_SimpleProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85EF3B8AF7B938D7F46349B /* Pods_SimpleProjectTests.framework */; };
 		52C93BD3FDD0D8975B970509 /* Pods_SimpleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BCF753BEC35080AB73199F /* Pods_SimpleProject.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		220949DA20C9CFBD005B75F7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		220949FB20C9D1FF005B75F7 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		220949FD20C9D2E9005B75F7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		220949FF20C9D3F3005B75F7 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		22094A0120C9D466005B75F7 /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
 		37CF245A29424A4C1EE8E8A5 /* Pods-SimpleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectTests/Pods-SimpleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A85EF3B8AF7B938D7F46349B /* Pods_SimpleProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC134747056CCE34514DD298 /* Pods-SimpleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectTests/Pods-SimpleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				220949C020C9CFBD005B75F7 /* RoundedView.swift */,
 				220949C120C9CFBD005B75F7 /* UIImageViewFactory.swift */,
 				220949C220C9CFBD005B75F7 /* UIButtonFactory.swift */,
+				22094A0120C9D466005B75F7 /* BasicView.swift */,
 			);
 			path = ViewFactories;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		220949F620C9D14A005B75F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				220949FF20C9D3F3005B75F7 /* PhotosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,12 +515,14 @@
 				220949E820C9CFBD005B75F7 /* String+Extensions.swift in Sources */,
 				220949E520C9CFBD005B75F7 /* Color.swift in Sources */,
 				220949FC20C9D1FF005B75F7 /* PhotosService.swift in Sources */,
+				22094A0220C9D466005B75F7 /* BasicView.swift in Sources */,
 				220949E020C9CFBD005B75F7 /* UIButtonFactory.swift in Sources */,
 				220949E220C9CFBD005B75F7 /* RefreshTokenProvider.swift in Sources */,
 				220949DE20C9CFBD005B75F7 /* RoundedView.swift in Sources */,
 				2209499C20C9CCEB005B75F7 /* AppDelegate.swift in Sources */,
 				220949EC20C9CFBD005B75F7 /* UITableView+Helpers.swift in Sources */,
 				220949E420C9CFBD005B75F7 /* Font.swift in Sources */,
+				22094A0020C9D3F3005B75F7 /* PhotosView.swift in Sources */,
 				220949E620C9CFBD005B75F7 /* UIViewController+Extensions.swift in Sources */,
 				220949EA20C9CFBD005B75F7 /* UITableView+ReusableView.swift in Sources */,
 				220949F020C9CFBD005B75F7 /* Localized.swift in Sources */,
