@@ -38,6 +38,15 @@ class PhotosViewController: UIViewController {
     
     setupCollectionView()
     setupRx()
+    
+    liveReload {
+      self.loadView()
+      self.disposeBag = DisposeBag()
+      self.photosView.photosCollectionView.delegate = nil
+      self.photosView.photosCollectionView.dataSource = nil
+      self.setupCollectionView()
+      self.setupRx()
+    }
   }
   
   private var photosView: PhotosView {
