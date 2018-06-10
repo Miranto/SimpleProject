@@ -19,6 +19,8 @@ PODS:
   - Moya/RxSwift (10.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Nimble (7.1.1)
+  - Quick (1.3.0)
   - Result (3.2.4)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
@@ -31,6 +33,8 @@ DEPENDENCIES:
   - Moya-ModelMapper (~> 6.0)
   - Moya-ModelMapper/RxSwift
   - Moya/RxSwift
+  - Nimble
+  - Quick
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -42,6 +46,8 @@ SPEC REPOS:
     - ModelMapper
     - Moya
     - Moya-ModelMapper
+    - Nimble
+    - Quick
     - Result
     - RxCocoa
     - RxSwift
@@ -53,11 +59,13 @@ SPEC CHECKSUMS:
   ModelMapper: a258c5f8e1422e0e826c8265a3e89ae1b329c3a6
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Moya-ModelMapper: c59c0bbd042cf9d1d9b0acf38c5f930956bebed8
+  Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 743397a297d140f4761796ed7d69d4f21685d7f4
+PODFILE CHECKSUM: 36d43f14b12356fbe2a848d68bc089325087f28e
 
 COCOAPODS: 1.5.2

@@ -7,43 +7,33 @@
 //
 
 import XCTest
+import Quick
+import Nimble
 @testable import SimpleProject
 
-class SimpleProjectTests: XCTestCase {
+class PhotosTests: QuickSpec {
   
   let photosViewModel = PhotosViewModel()
   
-  override func setUp() {
-    super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-    photosViewModel.currentPhotoId = 1
-  }
-  
-  override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    super.tearDown()
-  }
-  
-  func testSettingCurrentPhotoId() {
-    XCTAssertEqual(photosViewModel.currentPhotoId, 1)
-  }
-  
-  func testResetCurrentPhotoId() {
-    photosViewModel.resetData()
-    XCTAssertEqual(photosViewModel.currentPhotoId, 0)
-  }
-  
-  func testResetPhotoData() {
-    photosViewModel.resetData()
-    XCTAssertEqual(photosViewModel.photosData.value.count, 0)
-  }
-  
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
+  override func spec() {
+    describe("test PhotosViewModel") {
+      beforeEach {
+        self.photosViewModel.currentPhotoId = 1
+      }
+      
+      it("setting current photo id", closure: {
+        expect(self.photosViewModel.currentPhotoId).to(equal(1))
+      })
+      
+      it("reset current photo id", closure: {
+        self.photosViewModel.resetData()
+        expect(self.photosViewModel.currentPhotoId).to(equal(0))
+      })
+      
+      it("remove all data", closure: {
+        self.photosViewModel.resetData()
+        expect(self.photosViewModel.photosData.value.count).to(equal(0))
+      })
     }
   }
-  
 }
-
