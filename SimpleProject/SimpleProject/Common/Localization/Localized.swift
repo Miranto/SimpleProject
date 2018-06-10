@@ -14,6 +14,7 @@ enum Localized: String {
   
   case add
   case clear
+  case emptyData                        = "empty_data"
   
   var string: String {
     return NSLocalizedString(self.rawValue, tableName: nil, bundle: Bundle.main, value: "", comment: "")

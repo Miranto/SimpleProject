@@ -37,6 +37,7 @@ class PhotosView: UIView {
   
   let addButton = UIButton.makeButton(with: Localized.add.string, textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
   let clearButton = UIButton.makeButton(with: Localized.clear.string, textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
+  let emptyListLabel = UILabel.makeLabel(text: Localized.emptyData.string, color: Constants.UI.Color.baseDarkGrey, font: Font.central2book, size: 16, alignment: .center)
 }
 
 extension PhotosView: BasicView {
@@ -49,6 +50,7 @@ extension PhotosView: BasicView {
     addSubview(photosCollectionView)
     addSubview(addButton)
     addSubview(clearButton)
+    addSubview(emptyListLabel)
   }
   
   func setupLayout() {
@@ -69,6 +71,10 @@ extension PhotosView: BasicView {
       make.width.equalTo(80)
       make.height.equalTo(40)
       make.bottom.equalTo(-10)
+    }
+    
+    emptyListLabel.snp.makeConstraints { (make) in
+      make.center.equalTo(snp.center)
     }
   }
   

@@ -63,6 +63,9 @@ class PhotosViewController: UIViewController {
     viewModel.photosData.asObservable().subscribe() { [unowned self] (event) in
       if (event.element?.count)! > 0 {
         self.scrollToBottom()
+        self.photosView.emptyListLabel.isHidden = true
+      } else {
+        self.photosView.emptyListLabel.isHidden = false
       }
     }.disposed(by: disposeBag)
     
