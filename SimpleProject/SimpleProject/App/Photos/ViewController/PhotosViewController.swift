@@ -70,6 +70,11 @@ class PhotosViewController: UIViewController {
       .subscribe({ [unowned self] _ in
         self.viewModel.getPhoto(with: self.viewModel.currentPhotoId)
       }).disposed(by: disposeBag)
+    
+    photosView.clearButton.rx.tap
+      .subscribe({ [unowned self] _ in
+        self.viewModel.resetData()
+      }).disposed(by: disposeBag)
   }
   
   private func scrollToBottom() {

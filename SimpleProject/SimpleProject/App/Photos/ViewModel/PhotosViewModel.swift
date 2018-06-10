@@ -16,6 +16,7 @@ protocol PhotosViewModelType {
   var photosData: Variable<[Photo]> { get set }
   var photosProvider: RefreshTokenProvider<PhotosService> { get }
   func getPhoto(with id: Int)
+  func resetData()
 }
 
 final class PhotosViewModel: PhotosViewModelType {
@@ -38,5 +39,9 @@ final class PhotosViewModel: PhotosViewModelType {
       }.disposed(by: disposeBag)
   }
   
-  
+  func resetData() {
+    currentPhotoId = 0
+    photosData.value.removeAll()
+    disposeBag = DisposeBag()
+  }
 }
