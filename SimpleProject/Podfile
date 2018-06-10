@@ -18,6 +18,7 @@ target 'SimpleProject' do
   target 'SimpleProjectTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxSwift'
   end
 
 end
