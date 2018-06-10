@@ -12,6 +12,8 @@ target 'SimpleProject' do
   pod 'Moya', '~> 10.0'
   pod 'Moya/RxSwift'
   pod 'Moya-ModelMapper', '~> 6.0'
+  pod 'Moya-ModelMapper/RxSwift'
+  pod 'Kingfisher'
   
   target 'SimpleProjectTests' do
     inherit! :search_paths

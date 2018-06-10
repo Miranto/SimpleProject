@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - Kingfisher (4.7.0)
   - ModelMapper (8.0.0)
   - Moya (10.0.2):
     - Moya/Core (= 10.0.2)
@@ -8,6 +9,10 @@ PODS:
   - Moya-ModelMapper/Core (6.0.0):
     - ModelMapper
     - Moya (~> 10.0)
+  - Moya-ModelMapper/RxSwift (6.0.0):
+    - Moya-ModelMapper/Core
+    - Moya/RxSwift (~> 10.0)
+    - RxSwift
   - Moya/Core (10.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -21,8 +26,10 @@ PODS:
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - Moya (~> 10.0)
   - Moya-ModelMapper (~> 6.0)
+  - Moya-ModelMapper/RxSwift
   - Moya/RxSwift
   - RxCocoa
   - SnapKit
@@ -30,6 +37,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
     - ModelMapper
     - Moya
     - Moya-ModelMapper
@@ -40,6 +48,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   ModelMapper: a258c5f8e1422e0e826c8265a3e89ae1b329c3a6
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Moya-ModelMapper: c59c0bbd042cf9d1d9b0acf38c5f930956bebed8
@@ -48,6 +57,6 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: c2a743d982cfa5f0533e3612fb3aa97933675521
+PODFILE CHECKSUM: 6d212267b829862c60ef1f18b07caed56c04f703
 
 COCOAPODS: 1.5.2
