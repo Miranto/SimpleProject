@@ -1,6 +1,6 @@
 //
 //  UICollectionView+Helpers.swift
-//  Move Sandbox
+//  Simple Project
 //
 //  Created by Mateusz Mirkowski on 15/12/2017.
 //  Copyright © 2017 Mateusz Mirkowski. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  String+Extensions.swift
-//  Move Sandbox
+//  Simple Project
 //
 //  Created by Mateusz Mirkowski on 16/05/2018.
 //  Copyright © 2018 Mateusz Mirkowski. All rights reserved.
