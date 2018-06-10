@@ -30,9 +30,7 @@ final class PhotosViewModel: PhotosViewModelType {
       .subscribe { event in
         switch event {
         case .success(let photo):
-          print("iddd")
-          print(photo.id!)
-//          self.categoriesData.value = newCategories
+          self.photosData.value.append(photo)
         case .error(let error):
           let err = error as? MoyaError
           print(err?.response?.statusCode ?? "no error")

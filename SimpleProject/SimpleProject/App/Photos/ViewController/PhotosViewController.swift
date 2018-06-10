@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class PhotosViewController: UIViewController {
   
@@ -39,17 +40,6 @@ class PhotosViewController: UIViewController {
     setupRx()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    setAttributedTitle(with: Localized.music.string.capitalized)
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    setAttributedTitle(with: Localized.music.string.capitalized) // bug in ios 10, need to set title in viewDidAppear either
-    //    venuesView.categoriesCollectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-  }
-  
   private var photosView: PhotosView {
     return view as! PhotosView
   }
@@ -58,28 +48,39 @@ class PhotosViewController: UIViewController {
   }
   
   private func setupCollectionView() {
-//    photosView.photosCollectionView.registerCollectionViewCellClass(VenueCategoryCollectionViewCell.self)
+    photosView.photosCollectionView.registerCollectionViewCellClass(PhotoCell.self)
     photosView.photosCollectionView.delegate = self
   }
   
   private func setupRx() {
-//    viewModel.categoriesData.asObservable().bind(to: photosView.photosCollectionView.rx.items) { collectionView, row, item in
-//      let cell = collectionView.dequeueReusableCell(VenueCategoryCollectionViewCell.self, indexPath: IndexPath(row: row, section: 0))
-//      cell.categoryButton.setTitle(item.name!, for: .normal)
-//      item.selected ? cell.selectRow() : cell.deselectRow()
-//      return cellK
-//    }.disposed(by: disposeBag)
+    viewModel.photosData.asObservable().bind(to: photosView.photosCollectionView.rx.items) { collectionView, row, item in
+      let cell = collectionView.dequeueReusableCell(PhotoCell.self, indexPath: IndexPath(row: row, section: 0))
+      cell.photoName.text = item.title!
+      cell.photoImage.kf.setImage(with: URL(string: item.thumbUrl!))
+      return cell
+    }.disposed(by: disposeBag)
+    
+    viewModel.photosData.asObservable().subscribe() { [unowned self] (event) in
+      if (event.element?.count)! > 0 {
+        self.scrollToBottom()
+      }
+    }.disposed(by: disposeBag)
     
     photosView.addButton.rx.tap
       .subscribe({ [unowned self] _ in
         self.viewModel.getPhoto(with: self.viewModel.currentPhotoId)
       }).disposed(by: disposeBag)
   }
+  
+  private func scrollToBottom() {
+    let lastItemIndex = IndexPath(item: viewModel.photosData.value.count-1, section: 0)
+    photosView.photosCollectionView.scrollToItem(at: lastItemIndex, at: UICollectionViewScrollPosition.top, animated: true)
+  }
 
 }
 
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: photosView.frame.size.width/2-15, height: 150)
+    return CGSize(width: photosView.frame.size.width/2-15, height: 220)
   }
 }
