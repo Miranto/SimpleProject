@@ -54,7 +54,7 @@ extension PhotosView: BasicView {
   func setupLayout() {
     photosCollectionView.snp.makeConstraints { (make) in
       make.top.left.right.equalTo(0)
-      make.bottom.equalTo(-80)
+      make.bottom.equalTo(addButton.snp.top).offset(-10)
     }
     
     addButton.snp.makeConstraints { (make) in
