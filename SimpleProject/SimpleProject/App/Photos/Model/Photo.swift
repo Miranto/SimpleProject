@@ -15,9 +15,9 @@ class Photo: Mappable {
   var thumbUrl: String?
   
   required init(map: Mapper) throws {
-    id = map.optionalFrom("id")
-    title = map.optionalFrom("title")
-    thumbUrl = map.optionalFrom("thumbnailUrl")
+    id = map.optionalFrom("id") ?? 0
+    title = map.optionalFrom("title") ?? ""
+    thumbUrl = map.optionalFrom("thumbnailUrl") ?? ""
   }
   
 }
