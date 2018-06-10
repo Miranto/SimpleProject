@@ -30,28 +30,6 @@ public class RefreshTokenProvider<Target>: MoyaProvider<Target> where Target: Mo
   func request(_ token: Target) -> Single<Moya.Response> {
     return self.rx.request(token)
       .flatMap({ (response) -> PrimitiveSequence<SingleTrait, Response> in
-//        if response.statusCode == 403 {
-//          return self.refreshProvider.rx.request(.refreshToken)
-//            .map({ (response) -> Response in
-//              if response.statusCode == 403 {
-////                UIApplication.topViewController()?.present(LoginViewController(viewModel: LoginViewModel()), animated: true, completion: nil)
-////                TokenManagerDeleter.deleteTokens()
-//              }
-//              return response
-//            })
-//            .map(to: Token.self, keyPath: "data")
-//            .do(onNext: { data  in
-////              TokenManagerSaver.saveAccessToken(with: data.accessToken!)
-////              TokenManagerSaver.saveRefreshToken(with: data.refreshToken!)
-//            }).flatMap { _ in
-//              return self.request(token) //retry the previous connection
-//          }
-//        } else if response.statusCode == 500 {
-////          Toast(text: Localized.serverError500.string, delay: 3.5, duration: Delay.short).show()
-//          return Single.just(response)
-//        } else {
-//          return Single.just(response)
-//        }
         return Single.just(response)
       })
   }

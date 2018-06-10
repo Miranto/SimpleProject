@@ -26,8 +26,6 @@ class PhotoCell: UICollectionViewCell {
   
   // MARK: Properties
   
-  var isCellSelected: Bool = false
-  
   lazy var containerView: UIView = {
     let view = UIView.makeView(with: Constants.UI.Color.baseVeryLightGrey)
     view.layer.borderColor = Constants.UI.Color.baseMediumGrey.cgColor

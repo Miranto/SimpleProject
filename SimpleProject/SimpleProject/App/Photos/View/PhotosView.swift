@@ -29,7 +29,6 @@ class PhotosView: UIView {
   
   let photosCollectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
-//    layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.backgroundColor = Constants.UI.Color.baseClear
     return collectionView

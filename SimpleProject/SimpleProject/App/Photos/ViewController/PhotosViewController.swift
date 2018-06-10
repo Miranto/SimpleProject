@@ -35,16 +35,13 @@ class PhotosViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureView()
+    
     setupCollectionView()
     setupRx()
   }
   
   private var photosView: PhotosView {
     return view as! PhotosView
-  }
-  
-  private func configureView() {
   }
   
   private func setupCollectionView() {
