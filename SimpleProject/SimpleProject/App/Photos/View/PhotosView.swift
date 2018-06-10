@@ -35,8 +35,8 @@ class PhotosView: UIView {
     return collectionView
   }()
   
-  let addButton = UIButton.makeButton(with: "Add", textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
-  let clearButton = UIButton.makeButton(with: "Clear", textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
+  let addButton = UIButton.makeButton(with: Localized.add.string, textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
+  let clearButton = UIButton.makeButton(with: Localized.clear.string, textColor: Constants.UI.Color.baseDarkGrey, font: Font.central2book, asset: nil)
 }
 
 extension PhotosView: BasicView {

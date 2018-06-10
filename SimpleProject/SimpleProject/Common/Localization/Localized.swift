@@ -12,20 +12,8 @@ enum Localized: String {
   case ok
   case error
   
-  case tilllate
-  
-  // Menu
-  case welcome
-  case events
-  case venues
-  case artists
-  case FAQ
-  
-  case logIn                      = "log_in"
-  case signUp                     = "sign_up"
-  
-  // Venues List
-  case music
+  case add
+  case clear
   
   var string: String {
     return NSLocalizedString(self.rawValue, tableName: nil, bundle: Bundle.main, value: "", comment: "")
